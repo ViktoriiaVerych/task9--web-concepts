@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/script.js"></script>
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Stress </h1>
+    <form id="stressForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        <p class="error-message" id="name-error"></p>
+
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age" required>
+        <p class="error-message" id="age-error"></p>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        <p class="error-message" id="email-error"></p>
+
+        <label for="password">Create a Strong Password:</label>
+        <input type="password" id="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+        <p class="hint">Password should have at least 8 characters with at least one lowercase letter, one uppercase letter, one number, and one special symbol.</p>
+        <p class="error-message" id="password-error"></p>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <p class="error-message" id="confirmPassword-error"></p>
+
+        <label for="stressLevel">From 1 to 10, how stressful is being a student?</label>
+        <input type="range" id="stressLevel" name="stressLevel" min="1" max="10" required>
+        <p class="error-message" id="stressLevel-error"></p>
+
+        <label for="major">Your Major:</label>
+        <input type="text" id="major" name="major" required>
+        <p class="error-message" id="major-error"></p>
+
+        <label for="comments">Any additional comments or thoughts:</label>
+        <textarea id="comments" name="comments" rows="13" required></textarea>
+        <p class="error-message" id="comments-error"></p>
+
+        <button type="button" id="submitBtn">Submit</button>
+    </form>
+
+    <div id="output"></div>
+</body>
+</html>
